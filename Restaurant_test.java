@@ -325,8 +325,8 @@ public class Restaurant_test {
 
         return seats_left;
     }
-    //-----------------------------------------------------------------------------
-
+ //-----------------------------------------------------------------------------
+                    //method for creating a new rservation
     public static String create(String last_name, String first_name, String s_time, String size) throws Exception {
 
         int time;
@@ -349,7 +349,8 @@ public class Restaurant_test {
         }
         return "";
     }
-
+//------------------------------------------------------------------------------
+               //-----method for creating breakfast reservation-----
     public static String createBreakfast(String last_name, String first_name, String s_time, String size) throws Exception {
 
         int number = 0;
@@ -410,7 +411,8 @@ public class Restaurant_test {
         }
         return "";
     }
-
+    //--------------------------------------------------------------------------
+                   //-----method for creating lunch reservation-----
     public static String createLunch(String last_name, String first_name, String s_time, String size) throws Exception {
         int number = 0;
 
@@ -471,7 +473,8 @@ public class Restaurant_test {
         return "";
 
     }
-
+//------------------------------------------------------------------------------
+                 //------method for creating dinner reservation-----
     public static String createDinner(String last_name, String first_name, String s_time, String size) throws Exception {
         int number = 0;
 
@@ -533,8 +536,8 @@ public class Restaurant_test {
 
     }
 
-    //-----------------------------------------------------------------------------
-    //-----Read from the database-----
+ //-----------------------------------------------------------------------------
+                //-----Read from the database-----
     public static String Read() throws Exception {
         Csi410_Restaurants res = new Csi410_Restaurants();
         Connection conn = res.get_Connection();
@@ -644,7 +647,7 @@ public class Restaurant_test {
         return "";
     }
     //----------------------------------------------------------------------------- 
-
+                //-----method for updating the database-----  
     public static String Update() throws Exception {
 
         String size = "";
@@ -869,7 +872,7 @@ public class Restaurant_test {
             System.out.println("Time mismatch");
             return "";
         }
-
+        //update table selected
         switch (table) {
             case "breakfast":
                 String update = "update breakfast set last_name = ?, first_name = ?, time = ?, party_size = ? where id = ?";
@@ -916,7 +919,7 @@ public class Restaurant_test {
     }
 
     //-----------------------------------------------------------------------------
-    //*****Delete method*****
+                //----Delete method----
     public static String delete() throws Exception {
 
         Scanner keyboard = new Scanner(System.in);
